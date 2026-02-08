@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ColorStation Options</title>
+    <script type="module" crossorigin src="/options.js"></script>
+    <link rel="modulepreload" crossorigin href="/chunks/constants.js">
+    <link rel="stylesheet" crossorigin href="/assets/style.css">
+  </head>
+  <body>
+    <main class="options">
+      <h1>ColorStation - Options</h1>
+      <p class="subtitle">Performance-first defaults and behavior.</p>
+
+      <form id="options-form" class="options-form">
+        <label>
+          Default copy format
+          <select id="default-format" name="default-format">
+            <option value="hex">HEX</option>
+            <option value="rgb">RGB</option>
+            <option value="hsl">HSL</option>
+          </select>
+        </label>
+
+        <label>
+          Default sampling size
+          <select id="default-sampling" name="default-sampling">
+            <option value="1">1x1</option>
+            <option value="3">3x3</option>
+            <option value="5">5x5</option>
+            <option value="11">11x11</option>
+            <option value="25">25x25</option>
+          </select>
+        </label>
+
+        <label class="toggle-row">
+          <input id="show-grid" type="checkbox" name="show-grid" />
+          Show pixel grid by default
+        </label>
+
+        <label class="toggle-row">
+          <input id="prefer-native" type="checkbox" name="prefer-native" />
+          Prefer Native Picker fallback
+        </label>
+      </form>
+
+      <p id="save-state" class="save-state" role="status" aria-live="polite"></p>
+    </main>
+
+  </body>
+</html>
